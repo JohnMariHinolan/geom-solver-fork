@@ -27,7 +27,7 @@ computes the perimeter and area of that shape.
 		
 		switch(ch){
 			case 1: //circleOption(); break;
-			case 2: //TriangleOption();break;
+			case 2: TriangleOption();break;
 			case 3: squareOption(); break;
 			case 4: //rectangleOption(); break;
 			case 5: //polygonOption(ch); break;
@@ -51,11 +51,28 @@ computes the perimeter and area of that shape.
 	}//circleOption
 	public static void TriangleOption(){
 	Scanner sc = new Scanner(System.in);
+	triangle tr = new triangle();
+	
 	System.out.println("Find the \n<1>Perimeter\n<2>Area");
 		int ch = sc.nextInt();
 		switch(ch){
-			case 1: //getTrianglePerimeter(); break;
-			case 2: //getTriangleArea(); break;
+			case 1: //getTrianglePerimeter(); 
+			Scanner input = new Scanner(System.in);
+		System.out.print("Enter Length of First Side :");
+        double a = input.nextDouble();
+        System.out.print("Enter Length of Second Side :");
+        double b = input.nextDouble();
+        System.out.print("Enter Length of Third Side :");
+        double c = input.nextDouble();
+			 System.out.print(   tr.GetPerimeter(a,b,c));
+			
+			break;
+			case 2: Scanner input1 = new Scanner(System.in);
+		System.out.print("Enter Length of Base Side :");
+        double a1 = input1.nextDouble();
+        System.out.print("Enter Length of Height :");
+        double b1 = input1.nextDouble();
+			System.out.print(tr.GetArea(a1,b1));break;
 			default: System.out.println("Option not found. Exiting.."); break;
 		}
 	}//circleOption
